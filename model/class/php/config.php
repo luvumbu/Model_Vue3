@@ -1,9 +1,88 @@
 <?php
-$filename = 'txt.txt';
-
+$filename = 'model/class/php/connexion.php';
 if (file_exists($filename)) {
-    echo "Le fichier $filename existe.";
-} else {
+
+include("connexion.php"); 
+
+                  $servername = "localhost";
+                  // Create connection
+                  // $conn = new mysqli($servername, $username, $password);
+
+                  // // Check connection
+                  // if ($conn->connect_error) {
+                  //   unlink("connexion.php");
+                  //   die("Connection failed: " . $conn->connect_error);                   
+                  // }
+
+                  // unlink('model/class/php/connexion.php');
+                  // echo "Connected successfully"; 
+                  
+
+
+ 
+
+
+
+                  try {
+                    $conn = new PDO("mysql:host=$servername;dbname=".$dbname, $username, $password);
+                    // set the PDO error mode to exception
+                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    echo "Connected successfully";
+                  } catch(PDOException $e) {
+
+                    echo "Connection failed: " . $e->getMessage();
+
+                    unlink('model/class/php/connexion.php');
+                    header("Refresh:0");
+                  }
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+
+// // Create connection
+// $conn = new mysqli($servername, $username, $password);
+
+// // Check connection
+// if ($conn->connect_error) {
+//   die("Connection failed: " . $conn->connect_error);
+// }
+// echo "Connected successfully";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  } 
+
+
+                  
+ 
+
+                  
+ 
+
+else {
  ?>
 
 <form  id="form-group">

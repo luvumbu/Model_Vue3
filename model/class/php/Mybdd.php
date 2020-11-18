@@ -1,9 +1,9 @@
 <?php
 class Fruit {
-  public $servername = "localhost";
-  public $username = "root";
-  public $password = "root";
-  public $dbname= "montest";
+  public $servername ;
+  public $username ;
+  public $password ;
+  public $dbnam;
   public $row_name= array();
   public $row_value=array();
 
@@ -14,7 +14,7 @@ class Fruit {
     $this->servername = $servername;
     $this->username = $username;
     $this->password = $password;
-    $this->dbname = $dbname;
+    $this->dbname =   $dbname;
   }
  
   function set_row_name($set_row_name){
