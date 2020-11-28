@@ -207,7 +207,7 @@ if ($result->num_rows > 0) {
   $conn->close();
 }
 else{
-  echo "FALSE";
+ //
 }
 
 
@@ -216,6 +216,9 @@ else{
 }
 
 // exemple d'utilisation de la class avec la clas à importer
+
+
+/*
 
 $apple = new Bdd_methode("localhost","root","root","bokonzi_all");
 $apple->set_sql('SELECT * FROM `club` WHERE `club_nom`="LMA4"');
@@ -232,5 +235,6 @@ $apple->execute();
 echo $apple->get_row_array_combine("club_region"); // ecrire directement la valeur recherche avec lindice du row a 0
 echo $apple->get_number_row_array_result(0);// indice du row a 1
 //echo $apple->count_row_array_number();
+*/
  
 ?>
