@@ -10,7 +10,18 @@ private $row_array_number= array();
 private $row_array_name= array();
 private $row_array_result= array();
 private $row_array_combine= array(); 
+private $row_array_all= array();
 private $insert_sql;
+
+function set_row_array_all($set){
+  array_push($this->row_array_all,$set);
+ }
+ function get_row_array_all($set){
+  return $this->row_array_all[$set];
+ }
+ function row_array_all(){  
+  return count($this->row_array_all);
+ }
 
  function set_row_array_number($set){
   array_push($this->row_array_number,$set);
@@ -142,9 +153,9 @@ if($this->check==true){
        
       for($i=0;$i<$this->count_row_array_number();$i++){
   
-        $this->set_row_array_name($this->get_number_row_array_number($i));
-       
+        $this->set_row_array_name($this->get_number_row_array_number($i));       
         $this->set_row_array_result($row[$this->get_number_row_array_number($i)]);
+        $this->set_row_array_all($row[$this->get_number_row_array_number($i)]);
         
       }
       $this->count_row_array_number();
@@ -217,11 +228,10 @@ else{
 
 // exemple d'utilisation de la class avec la clas à importer
 
-
-/*
+ 
 
 $apple = new Bdd_methode("localhost","root","root","bokonzi_all");
-$apple->set_sql('SELECT * FROM `club` WHERE `club_nom`="LMA4"');
+$apple->set_sql('SELECT * FROM `club` WHERE 1');
 
 $apple->set_row_array_number("club_id"); // indeice du row a 0 
 $apple->set_row_array_number("club_nom"); // indeice du row a 0 
@@ -232,9 +242,14 @@ VALUES ('LMA4','NORD','59000')");
 // condition si la requette nest pas trouvé 
 $apple->execute();  
 //exemple pour obtenir des informations
-echo $apple->get_row_array_combine("club_region"); // ecrire directement la valeur recherche avec lindice du row a 0
-echo $apple->get_number_row_array_result(0);// indice du row a 1
+//echo $apple->get_row_array_combine("club_region"); // ecrire directement la valeur recherche avec lindice du row a 0
+//echo $apple->get_number_row_array_result(0);// indice du row a 1
+echo $apple->get_number_row_array_result(5);// indice du row a 1
+
+
+
+echo $apple->row_array_all();
 //echo $apple->count_row_array_number();
-*/
+
  
 ?>

@@ -4,10 +4,46 @@
   }
   body{
   /*  font-family: "OwlCute";*/
-
   }
   #form-group{
     width: 60%;
     margin: auto;
     margin-top: 100px;
   }
+  .class_img img{ 
+    height: 300px;  
+  }
+  .cursor-pointer{
+        cursor: pointer;
+  }
+  .class_img{
+    max-width: 300px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    text-align: center;
+  }
+  .containers{
+    display: flex;
+    justify-content:center;
+    margin-top:100px;
+    justify-content: center;
+  }
+     
+  @media screen and (max-width: 1280px)
+    {
+      .class_img img{
+      height: 300px;
+      }
+      .class_img{
+      max-height: 300px;
+      overflow-y: hidden;
+      overflow-x: hidden;
+      text-align: center;
+        }
+      .containers{
+        display: flex;
+        justify-content:center;
+        margin-top:100px;
+        justify-content: center;
+        }
+    }
