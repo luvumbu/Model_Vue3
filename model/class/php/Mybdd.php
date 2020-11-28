@@ -229,7 +229,7 @@ else{
 // exemple d'utilisation de la class avec la clas à importer
 
  
-
+/*
 $apple = new Bdd_methode("localhost","root","root","bokonzi_all");
 $apple->set_sql('SELECT * FROM `club` WHERE 1');
 
@@ -250,6 +250,8 @@ echo $apple->get_number_row_array_result(5);// indice du row a 1
 
 echo $apple->row_array_all();
 //echo $apple->count_row_array_number();
+
+*/
 
  
 ?>
