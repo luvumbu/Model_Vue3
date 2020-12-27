@@ -10,11 +10,12 @@
   ?>
 <div id="body"> 
 <?php    
+
+  
     include("model/class/php/Class.php");  
     include("view/header.php");
     include("view/section.php");
-    include("view/footer.php");
-  
+    include("view/footer.php"); 
  
 ?>
 </div>

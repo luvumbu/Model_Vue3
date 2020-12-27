@@ -3,13 +3,21 @@ header("Access-Control-Allow-Origin: *");
 $dbname= $_POST["dbname"];
 $username= $_POST["username"];
 $password= $_POST["password"];
-//bokonzi_all
+/*
+  //********************************************
+  //*informations envoye a l'aide du formulaire*
+  //*si le fichier connexion.php n'existe pas  *
+  //******************************************** 
+    */ 
+
 $servername = "localhost";
 $n="\n";
 $debut="<?php".$n;
 $fin="?>".$n;
-$nom_file = "connexion.php";
 
+// nom du fichier courant
+$nom_file = "connexion.php";
+// fin du fichier courant 
 
 try {
   $conn = new PDO("mysql:host=$servername;dbname=".$dbname, $username, $password);
@@ -25,11 +33,7 @@ try {
   // fermeture
   fclose($f);
 
-
 } catch(PDOException $e) {
   echo "Connection failed: " . $e->getMessage();
 }
-
- 
-
 ?>
