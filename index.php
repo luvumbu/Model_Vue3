@@ -22,14 +22,5 @@
 <script src="vue.js"></script>
 <script src="model/class/js/bdd_exe_test.js"></script>    
 
- 
-<style>
-#test{
-  background-color:red;
-  height:200px; 
-  width:100px;
-}
- 
-</style>
 </body>
 </html>
