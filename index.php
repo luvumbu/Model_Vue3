@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  
+<head>  
     <title>Bkz-technologie</title>
 </head>
 <body>
   <?php 
    include("link.html");
   ?>
-<div id="body"> 
+  </div>
+<div id="body"   @mouseover="position_mouse"> 
 <?php    
 
   
@@ -21,5 +21,15 @@
 </div>
 <script src="vue.js"></script>
 <script src="model/class/js/bdd_exe_test.js"></script>    
+
+ 
+<style>
+#test{
+  background-color:red;
+  height:200px; 
+  width:100px;
+}
+ 
+</style>
 </body>
 </html>

@@ -1,7 +1,5 @@
 <?php 
 
-
-
 $filename = 'model/class/php/connexion.php';
 if (!file_exists($filename)) {
    // echo "Le fichier $filename existe pas";
