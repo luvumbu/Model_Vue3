@@ -20,7 +20,6 @@
 ?>
 </div>
 <script src="vue.js"></script>
-<script src="model/class/js/bdd_exe_test.js"></script>    
-
+<script src="model/class/js/bdd_exe_test.js"></script>
 </body>
 </html>
