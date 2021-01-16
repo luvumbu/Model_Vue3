@@ -26,10 +26,17 @@
     echo "<footer>";
     include("view/footer.php"); 
     echo "</footer>";
- 
+     echo "</div>";
 ?>
+
+
 </div>
 <script src="vue.js"></script>
 <script src="model/class/js/bdd_exe_test.js"></script>
+<style>
+  .none{
+    display:none;
+  }
+</style>
 </body>
 </html>
