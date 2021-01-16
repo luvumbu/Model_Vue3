@@ -14,7 +14,10 @@ if (!file_exists($filename)) {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
    // echo "Connected successfully";
   } catch(PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
+    //echo "Connection failed: " . $e->getMessage();
+     
+    unlink('model/class/php/connexion.php');
+ 
   }
  
   //  echo "Le fichier $filename n'existe pas.";
