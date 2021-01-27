@@ -12,31 +12,27 @@
   </div>
 <div id="body"   @mouseover="position_mouse"> 
 
- 
-
 <?php    
- 
-    include("model/class/php/Class.php");  
-    echo "<header>";
-      include("view/header.php");
-    echo "</header>";
-    echo "<section>";
-        include("view/section.php");
-    echo "</section>";
-    echo "<footer>";
-    include("view/footer.php"); 
-    echo "</footer>";
-     echo "</div>";
+     include("model/class/php/Class.php");  
 ?>
-
-
+<header>
+    <?php        
+        include("view/header.php");
+    ?>
+</header>
+<section>
+    <?php       
+        include("view/section.php");
+    ?>
+</section>
+<footer>
+    <?php       
+         include("view/footer.php"); 
+    ?>
+</footer>
 </div>
 <script src="vue.js"></script>
 <script src="model/class/js/bdd_exe_test.js"></script>
-<style>
-  .none{
-    display:none;
-  }
-</style>
+ 
 </body>
 </html>

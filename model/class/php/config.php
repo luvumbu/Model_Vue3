@@ -14,7 +14,5 @@
   </div> 
   <div type="submit" class="btn btn-primary" onclick="bdd_exe_test()">Submit</div>
 </form>
-
-
 <div class="none">
-none
+ 
