@@ -13,7 +13,7 @@
 <div id="body"   @mouseover="position_mouse"> 
 
 <?php    
-     include("model/class/php/Class.php");  
+ include("model/class/php/Class.php");  
 ?>
 <header>
     <?php        
@@ -27,12 +27,18 @@
 </section>
 <footer>
     <?php       
-         include("view/footer.php"); 
+         include("view/footer.php");          
     ?>
 </footer>
+
 </div>
 <script src="vue.js"></script>
 <script src="model/class/js/bdd_exe_test.js"></script>
+<?php 
+if($config_==false){ 
+echo '<link rel="stylesheet" href="model/css/remove_body.css">';
+ }
+?>
  
 </body>
 </html>
