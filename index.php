@@ -39,6 +39,16 @@ if($config_==false){
 echo '<link rel="stylesheet" href="model/css/remove_body.css">';
  }
 ?>
+
+
+<script >
+ 
+ 
+ 
+
+ 
+
+</script>
  
 </body>
 </html>

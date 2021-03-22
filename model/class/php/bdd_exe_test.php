@@ -20,6 +20,40 @@ $nom_file = "connexion.php";
 // fin du fichier courant 
 
 try {
+ // debut du test 
+                      // Create connection
+                      $conn = new mysqli($servername, $username, $password, $dbname);
+                      // Check connection
+                      if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                      }
+
+                      // sql to create table
+                      $sql = "CREATE TABLE mouse_move (
+                      id_mouse_move	 INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+                      adresse_ip VARCHAR(30) NOT NULL,
+                      x_position VARCHAR(30) NOT NULL,
+                      y_position VARCHAR(50),
+                      reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+                      )";
+
+                      if ($conn->query($sql) === TRUE) {
+                        echo "Table mouse_move created successfully";
+                      } else {
+                        echo "Error creating table: " . $conn->error;
+                      }
+
+                      $conn->close();
+
+ // fin du test 
+} catch (Exception $e) {
+  echo 'Exception reçue : ',  $e->getMessage(), "\n";
+}
+
+
+
+
+try {
   $conn = new PDO("mysql:host=$servername;dbname=".$dbname, $username, $password);
   // set the PDO error mode to exception
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
