@@ -18,6 +18,15 @@ $fin="?>".$n;
 // nom du fichier courant
 $nom_file = "connexion.php";
 // fin du fichier courant 
+ 
+
+
+
+//$servername = "localhost";
+//$username = "u481158665_facebook_clone";
+//$password = "v3p9r3e@59A";
+//$dbname = "u481158665_facebook_clone";
+
 
 try {
  // debut du test 
@@ -49,7 +58,7 @@ try {
 } catch (Exception $e) {
   echo 'Exception reçue : ',  $e->getMessage(), "\n";
 }
-
+ 
 
 
 

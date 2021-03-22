@@ -65,13 +65,3 @@ if (file_exists($filename)) {
 <?php 
 }
 ?>
-
-
-
-
-
-
-
-
-
-
